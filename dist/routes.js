@@ -7,9 +7,13 @@ exports.CreateCourse = void 0;
 const CreateCourseService_1 = __importDefault(require("./CreateCourseService"));
 function CreateCourse(request, response) {
     CreateCourseService_1.default.execute({
-        name: 'Cauã',
-        duration: 2,
-        educator: 'Daniele'
+        name: 'NodeJs',
+        educator: 'Daniele',
+        duration: 10
+    });
+    CreateCourseService_1.default.execute({
+        name: 'ReactJs',
+        educator: 'Diego Fernandes'
     });
     return response.send();
 }

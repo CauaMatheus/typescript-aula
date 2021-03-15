@@ -1,12 +1,12 @@
 interface Course {
   name: string
-  duration: number
   educator: string
+  duration?: number
 }
 
 class CreateCourseService {
-  async execute({ name, duration, educator }: Course) {
-    console.log(name, duration, educator)
+  async execute({ name, educator, duration = 8 }: Course) {
+    console.log(name, educator, duration)
   }
 }
 export default new CreateCourseService()
